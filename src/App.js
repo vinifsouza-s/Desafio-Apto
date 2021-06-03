@@ -1,8 +1,10 @@
 import './App.css';
 import SearchBar from './Components/SearchBar/SearchBar';
-import logo from './logo.png';
-import logo1 from './logo1.png';
+import logo from './Assets/logo.png';
+import logo1 from './Assets/logo1.png';
 import { BrowserRouter , Switch , Route , Link} from "react-router-dom"
+import Home from './Components/HomePage/Home';
+import React from 'react';
 
 
 function App() {
@@ -31,16 +33,5 @@ function App() {
   );
 }
 
-const Home = () => (
-  <div>
-    <h1>Pesquisa de Diretorios</h1>
-    <Link to="/searchbar">
-    <button
-      className="ui primary button"
-      type="submit"
-        >Clique aqui para iniciar a pesquisa</button>
-    </Link>
-  </div>
-)
 
 export default App;

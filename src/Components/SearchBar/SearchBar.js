@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import DataBar from "../DataBar/DataBar";
 
 
@@ -33,6 +34,7 @@ const SearchBar = () => {
         <div className="ui search">
           <div className="ui icon input">
             <i className="search icon"></i>
+            
             <input
               className="prompt"
               placeholder="Digite o nome..."
@@ -40,26 +42,20 @@ const SearchBar = () => {
               value={username}
               onChange={onChangeHandler}
             />
+ 
           </div>
-            
+          
           <button
             className="ui primary button"
             type="submit"
             onClick={submitHandler}
+            onChange={onChangeHandler}
           >
             <i className="github icon"></i>
             Search
           </button>
-
-          
-          
-          <button
-          className="ui primary button"
-          type="submit">Limpar pesquisa</button>
-         
           
           <DataBar data={data} repositories={repositories} />
-          
           
         </div>
       </div>
